@@ -23,6 +23,12 @@ a{
     text-decoration: none;
     color: white;
 }
+
+
+section{
+    width: 1060px;
+    margin: 0 auto;
+}
 /* shared styles end */
 
 body{
@@ -30,11 +36,11 @@ body{
     margin: 0 auto;
     color: white;
     /* background-color: rgb(32, 32, 32); */
-    /* background-color: #000; */
+    background-color: #000;
 }
 
 header {
-    /* height: 715px; */
+    height: 715px;
     background: linear-gradient(to bottom, 
         rgb(0, 0, 0) -20%, 
         rgb(32, 32, 32) 30%, 
@@ -94,8 +100,6 @@ li{
     justify-content: center;
     align-items: center;
     gap: 80px;
-    width: 1060px;
-    margin: 0 auto;
 }
 
 .banner_title{
@@ -123,6 +127,7 @@ li{
     transition: all 0.3s linear;
     cursor: pointer;
     border: 1px solid var(--primary-color);
+    font-size: 18px;
 }
 .btn:hover{
     background-color: black;
@@ -145,6 +150,8 @@ li{
 .banner_image{
    position: relative;
 }
+
+
 
 .workout{
  width: 196px;
@@ -211,17 +218,85 @@ li{
     opacity: 65%;
 }
 
+/* habit section styles */
 
+.habit{
+    margin-top: 100px;
+}
 
+.habit_content{
+    width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
 
+.habit_title{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.habit_description{
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 50%;
+    margin: 15px 0 50px 0;
+}
+
+.card_container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+    gap: 40px;
+}
+
+.card{
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* border: 2px solid #E6533C; */
+}
+
+.card_image{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card_content{
+    text-align: center;
+}
+.card_title{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card_description{
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 50%;
+}
 
 
 /* responsive styles for mobile */
 
 @media screen and (max-width: 576px){
-    nav{
-        width: 100%;
+    
+    header{
         padding: 20px;
+        height: 1150px;
+        margin-bottom: 100px;
+    }
+
+    nav{    
+        width: 100%;
     }
     
     .bar_icon{
@@ -233,13 +308,134 @@ li{
     .none{
         display: none;
     }
+
+    .banner_container{
+        width: 100%;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .banner_title{
+        font-size: 3rem;
+        width: 285px;
+    }
+
+    .banner_description{
+        width: 270px;
+    }
+
+    .btn_1, .btn_2{
+        width: 150px;
+        font-size: 15px;
+        padding: 16px;
+    }
+
+    .btn_2{
+        margin-left: 10px;
+    }
+
+    .banner_image img{
+        width: 100%;
+    }
+
+    .workout{
+        top: 54px;
+        right: 30px;
+        width: 115px;
+        padding: 14px 18px;
+    }
+
+    .workout_description{
+        font-size: 7px;
+    }
+
+    .workout_number{
+        font-size: 1.2rem;
+    }
+
+    .video{
+        left: 20px;
+        bottom: 220px;
+        width: 155px;
+        padding: 14px 17px;
+    }
+
+    .play_icon{
+        width: 30px;
+        height: 30px;
+    }
+
+    .video_number{
+        font-size: 18px;
+    }
+
+    .video_description{
+        font-size: 12px;
+    }
+
+    /* habit section */
+
+    
+    .habit{
+        width: 100%;
+    }
+    
+    .habit_content{
+        width: 318px;
+    }
+    .habit_description{
+        font-size: 13px;
+    }
+
+    .habit_title{
+        font-size: 2rem;
+    }
+    .card_container{
+        grid-template-columns: 1fr;
+    }
+
+
 }
 
 
 /* responsive styles for mobile */
 @media screen and (min-width: 576px) and (max-width: 992px) {
+    header{
+        padding: 20px;
+        height: 1250px;
+        margin-bottom: 100px;
+    }
+
     nav{
         width: 100%;
-        padding: 20px;
+        /* padding: 20px; */
+    }
+
+    .banner_container{
+        width: 100%;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .banner_content{
+        width: 600px;
+    }
+
+    .banner_title{
+        font-size: 6rem;
+    }
+
+
+    /* havit section styles */
+    .habit{
+        width: 100%;
+    }
+    
+    .habit_content{
+        width: 476px;
+    }
+
+    .card_container{
+        grid-template-columns: repeat(2,1fr);
     }
 }
