@@ -28,12 +28,13 @@ a{
 body{
     max-width: 1440px;
     margin: 0 auto;
+    color: white;
     /* background-color: rgb(32, 32, 32); */
-    background-color: #000;
+    /* background-color: #000; */
 }
 
 header {
-    height: 715px;
+    /* height: 715px; */
     background: linear-gradient(to bottom, 
         rgb(0, 0, 0) -20%, 
         rgb(32, 32, 32) 30%, 
@@ -64,7 +65,7 @@ ul{
     gap: 45px;
     width: 400px;
     height: 46px;
-    border: 2px solid #4d4d4d;
+    box-shadow: rgba(100, 100, 100, 0.25) 0px 1px 1px, rgba(166, 166, 166, 0.13) 0px 0px 1px 1px;
     border-radius: 20px;
     padding: 4px 19px 4px 2px;
 }
@@ -76,5 +77,169 @@ li{
 .color_ful{
     background-color: var(--primary-color);
     padding: 8px 20px;
-    border-radius: 16px;
+    border-radius: 42px;
+}
+
+.bar_icon{
+    display: none;
+}
+
+
+
+
+/* banner section styles */
+
+.banner_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.banner_title{
+    font-size: 5.2rem;
+}
+
+.style_font{
+    font-family: 'Dancing Script', cursive;
+}
+
+.banner_description{
+    font-weight: 400;
+    opacity: 50%;
+    margin: 28px 0;
+    line-height: 24px;
+}
+
+.btn{
+    width: 224px;
+    padding: 16px 45px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 42px;
+    color: white;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+}
+.btn:hover{
+    background-color: black;
+    border: 1px solid white;
+}
+
+.btn_2{
+    background-color: black;
+    border: 1px solid white;
+    transition: all 0.3s linear;
+    margin-left: 15px;
+}
+
+.btn_2:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+
+.banner_image{
+   position: relative;
+}
+
+.workout{
+ width: 196px;
+ padding: 16px 24px;
+ border-radius: 12px;
+ position: absolute;
+ top: 150px;
+ right: -70px;
+ background: rgba(255, 255, 255, 0.1); 
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
+ backdrop-filter: blur(10px); 
+ -webkit-backdrop-filter: blur(10px); 
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ color: white;
+}
+
+.workout_number{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.workout_description{
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 65%;
+}
+
+.video{
+    width: 200px;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 70px;
+    left: -100px;
+    background: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 23px;
+    gap: 8px;
+}
+
+.play_icon{
+    background-color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video_number{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.video_description{
+    font-weight: 400;
+    opacity: 65%;
+}
+
+
+
+
+
+
+/* responsive styles for mobile */
+
+@media screen and (max-width: 576px){
+    nav{
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .bar_icon{
+        color: white;
+        display: block;
+        font-size: 20px;
+    }
+    
+    .none{
+        display: none;
+    }
+}
+
+
+/* responsive styles for mobile */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    nav{
+        width: 100%;
+        padding: 20px;
+    }
 }
