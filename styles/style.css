@@ -29,14 +29,14 @@ body{
     max-width: 1440px;
     margin: 0 auto;
     /* background-color: rgb(32, 32, 32); */
-    /* background-color: #000; */
+    background-color: #000;
 }
 
 header {
     height: 715px;
     background: linear-gradient(to bottom, 
-        rgb(0, 0, 0) -40%, 
-        rgb(32, 32, 32) 40%, 
+        rgb(0, 0, 0) -20%, 
+        rgb(32, 32, 32) 30%, 
         rgb(32, 32, 32) 60%, 
         black 100%);
 }
