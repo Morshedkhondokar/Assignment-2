@@ -18,6 +18,7 @@
     --primary-color: #E6533C;
     --bg-color: #222222;
     --input-bg-color:rgb(57, 57, 57);
+    --footer-bg-color: #191919;
 }
 
 
@@ -29,7 +30,7 @@ a{
 
 section{
     width: 1060px;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 /* shared styles end */
 
@@ -517,6 +518,86 @@ select{
     margin-bottom: 30px;
 }
 
+
+/* meet our team section styles */
+
+.meet_content{
+    width: 670px;
+    margin: 50px auto;
+    text-align: center;
+}
+.meet_title{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.met_description{
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 50%;
+}
+
+
+.meet_image_container{
+    background-color: var(--footer-bg-color);
+    padding: 20px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+
+.team_image{
+    background-position: center;
+    background-size: cover;
+    width: 320px;
+    height: 270px;
+    position: relative;
+    border-radius: 16px;
+
+}
+
+.team_image:nth-child(1){ 
+    background-image: url(../images/trainer1.png);
+}
+.team_image:nth-child(2){ 
+    background-image: url(../images/trainer2.png);
+}
+.team_image:nth-child(3){ 
+    background-image: url(../images/trainer3.png);
+}
+.team_image:nth-child(4){ 
+    background-image: url(../images/trainer4.png);
+}
+.team_image:nth-child(5){ 
+    background-image: url(../images/trainer5.png);
+}
+.team_image:nth-child(6){ 
+    background-image: url(../images/trainer6.png);
+}
+
+
+.trainer_name{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.trainer_sub_title{
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 65%;
+}
+
+.team_content{
+    position: absolute;
+    bottom: 30px;
+    left: 20px;  
+}
+
+
+
+
 /* responsive styles for mobile */
 
 @media screen and (max-width: 576px){
@@ -696,7 +777,7 @@ select{
     }
 
     .bmi_chart{
-        position: none;
+        top: 5px;
     }
 
 
@@ -706,12 +787,38 @@ select{
 
     input[type="number"], .sex{
         width: 174px;
-        
     }
 
     .Height, .age{
-        margin-right: 0;
-    
+        margin-right: 0;   
+    }
+
+    /* meet our team responsive styles*/
+
+    .meet_content{
+        width: 300px;
+        margin: 0;
+    }
+    .meet_title{
+        font-size: 2rem;
+    }
+
+    .meet{
+        width: 350px;
+        place-items: center;
+    }
+
+    .meet_image_container{
+        background-color: var(--footer-bg-color);
+        padding: 20px;
+        border-radius: 16px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .team_image{
+        width: 300px;
     }
 }
 
@@ -803,11 +910,34 @@ select{
         align-items: start;
         gap: 40px;
         width: 630px;
-        margin: 0 auto;
     }
 
     .bmi_chart{
-        position: none;
+        top: 5px;
+    }
+
+    /* meet our team */
+
+    .team_image{
+        width: 100%;
+        place-items: center;
+    }
+
+    .team_image{
+        width: 210px;
+    }
+
+    .meet_image_container{
+        background-color: var(--footer-bg-color);
+        padding: 10px;
+        border-radius: 16px;
+        display: grid;
+        grid-template-columns: repeat(3,200px);
+        gap: 20px;
+    } 
+
+    .meet{
+        width: 670px;
     }
 
 }
