@@ -17,6 +17,7 @@
 :root{
     --primary-color: #E6533C;
     --bg-color: #222222;
+    --input-bg-color:rgb(57, 57, 57);
 }
 
 
@@ -290,7 +291,7 @@ li{
     align-items: center;
     gap: 100px;
     background-color: var(--bg-color);
-    margin: 100px;
+    margin: 100px auto;
     padding: 40px 45px;
     border-radius: 16px;
 }
@@ -323,7 +324,198 @@ li{
     border-radius: 18px;
 }
 
+/* training section */
 
+.training_title{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.training_description{
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 50%;
+    width: 630px;
+    margin-top: 14px;
+    margin-bottom:50px;
+}
+
+.training_image_container{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 200px 30px 200px;
+    grid-template-areas: 
+    "tl tl tl tc tc tc tc tc tc  tr tr tr "
+    "bl bl bl bl bl bc bc bc bc  br br br"
+    "bl bl bl bl bl bc bc bc bc  br br br"
+    ;
+
+}
+
+
+
+.image_1,.image_2,.image_3,.image_4,.image_5,.image_6{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.image_1{
+    grid-area: tl;
+    background-image: linear-gradient(rgba(6, 255, 210, 0.5)), url(../images/exercise1.jpg);
+}
+.image_2{
+    grid-area: tc;
+    background-image: linear-gradient(rgba(255, 0, 0, 0.3)), url(../images/exercise2.png);
+}
+.image_3{
+    grid-area: tr;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5)),url(../images/exercise3.png);
+}
+.image_4{
+    grid-area: bl;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../images/exercise4.png);
+}
+.image_5{
+    grid-area: bc;
+    background-image:linear-gradient(rgba(66, 255, 0, 0.3)), url(../images/exercise5.jpg);
+}
+.image_6{
+    grid-area: br;
+    background-image:linear-gradient(rgba(0, 71, 255, 0.3)), url(../images/exercise6.jpg);
+}
+
+.image_sub_title_1,.image_sub_title_3,.image_sub_title_5,.image_sub_title_6{
+    position: absolute;
+    bottom: 20px;
+    left: 23px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.image_sub_title_2{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+.image_sub_title_4{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+/* bmi Calculator styles */
+
+.bmi_Calculator{
+    width: 630px;
+    margin: 88px auto;
+}
+
+.bmi_title{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.bmi_description{
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 50%;
+}
+
+/* ======================== */
+.bmi_container{
+    max-width: 1440px;
+    background-color: var(--bg-color);
+}
+
+.bami_content{
+    width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: 50px 0;
+}
+/* bmi chart======  */
+
+.bmi_chart{
+    width: 310px;
+    /* border: 2px solid gold; */
+    position: relative;
+    top: -35px;
+}
+.chart_title{
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.bmi_chart table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.bmi_chart table, th, td{
+    border: 1px solid var(--input-bg-color);
+    padding: 10px;
+    text-align: left;
+}
+
+td{
+    font-size: 14px;
+    opacity: 65%;
+}
+/* calculate your ========== */
+.calculat_your{
+    width: 455px;
+    /* border: 2px solid red; */
+}
+
+.your_title{
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.your_description{
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 50%;
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+input{
+    background-color: var(--input-bg-color);
+    padding: 12px 30px;
+    color: #fff;
+    border: none;
+    margin-top: 12px;
+}
+
+.Height, .age{
+    margin-right: 12px;
+
+}
+
+input[type="number"],.sex{
+    width: 217px;
+    border-radius: 10px;
+}
+select{
+    padding: 12px 40px 12px 20px;
+    background-color: var(--input-bg-color);
+    border: none;
+    color: white;
+    opacity: 70%;
+    border-radius: 10px;
+}
+.activity{
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
 
 /* responsive styles for mobile */
 
@@ -438,9 +630,9 @@ li{
     .run{
         flex-direction: column;
         gap: 30px;
-        width: 330px;
+        width: 310px;
         margin: 60px auto;
-        padding: 30px 28px;
+        padding: 20px 15px;
         justify-content: center;
         align-items: center;
     }
@@ -453,7 +645,74 @@ li{
         font-size: 2rem;
     }
 
+    /* training */
+    .training{
+        width: 353px;
+        padding: 20px;
+    }
 
+    .training_title{
+        font-size: 2rem;
+    }
+
+    .training_image_container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 100px 100px 100px;
+        grid-template-areas: 
+        "tl  tc"
+        "tr bl"
+        "bc br"
+        ;
+    }
+
+    .training_description{
+        width: 330px;
+    }
+    .image_sub_title_1, .image_2,.image_sub_title_3,.image_4,.image_sub_title_5,.image_sub_title_6{
+        font-size: 9px;
+        font-weight: 400;
+    }
+
+    .image_sub_title_4{
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+    }
+
+    /* bami content */
+
+    .bmi_title{
+        font-size: 2rem;
+    }
+
+    .bmi_description{
+        width: 290px;
+    }
+    .bami_content{
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .bmi_chart{
+        position: none;
+    }
+
+
+    .calculat_your,.bmi_Calculator{
+        width: 354px;
+    }
+
+    input[type="number"], .sex{
+        width: 174px;
+        
+    }
+
+    .Height, .age{
+        margin-right: 0;
+    
+    }
 }
 
 
@@ -515,4 +774,40 @@ li{
     .run_title{
         font-size: 2rem;
     }
+
+    .training{
+        width: 684px;
+        margin: 0 auto;
+    }
+
+    .training_image_container{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 150px 30px 150px;
+        grid-template-areas: 
+        "tl tl tl tl tc tc tc tc tl  tr tr tr "
+        "bl bl bl bl bc bc bc bc br  br br br"
+        "bl bl bl bl bc bc bc bc br  br br br"
+        ;
+    
+    }
+    .image_sub_title_1, .image_2,.image_sub_title_3,.image_4,.image_sub_title_5,.image_sub_title_6{
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    /* bmi calculate */
+    .bami_content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 40px;
+        width: 630px;
+        margin: 0 auto;
+    }
+
+    .bmi_chart{
+        position: none;
+    }
+
 }
